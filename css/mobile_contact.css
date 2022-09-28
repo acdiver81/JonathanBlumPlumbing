@@ -1,0 +1,52 @@
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+    header h1 {
+        display: none;
+    }
+
+    .header-logo {
+        width: auto;
+        margin-right: 40px;
+    }
+
+    .logo {
+        font-size: 1rem; 
+        margin-top: .8rem;
+
+    }
+
+    .navbar a {
+        font-size: 1em;
+        padding: .5em;
+        
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    textarea {
+        width: 80%;
+    }
+
+    input {
+       font-size: .8rem;
+       width: 50%;
+    }
+
+    .map {
+        text-align: center;
+    }
+
+    iframe{
+        width: 500px;
+        height: 300px;
+    }
+    
+}

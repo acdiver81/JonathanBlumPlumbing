@@ -1,0 +1,208 @@
+
+/* Main Page */
+
+@media (max-width: 1022px) {
+    .plumbing {
+        background: rgb(0,255,255);
+    }
+}
+
+@media (max-width: 1220px) {
+
+    header h1 {
+        display: none;
+    }
+
+    .header-logo {
+        width: auto;
+        margin-right: 40px;
+    }
+
+    .logo {
+        font-size: 2rem; 
+        margin-top: .8rem;
+
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        justify-items: center;
+        align-content: center;
+        
+    }
+
+    nav {
+        margin-top: 10px;
+        
+    }
+
+    .navbar a {
+        font-size: 1em;
+        padding: .5em;
+        margin: 0;
+    }
+
+    .navbar ul {
+
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .sink {
+        width: 100%;
+    }
+
+
+    .sink img {
+        height: auto;
+        width: 100%;
+        -webkit-clip-path: none;
+	    clip-path: none;        
+    }
+
+    .flex-plumb {
+        flex: none;
+        border-bottom: 5px solid var(--secondary-color);
+        
+    }
+
+    .flex-plumb h2, .excav-content h2 {
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: 1.5rem;
+    }
+
+    .plumb-content {
+        padding: 1rem 3rem;
+        margin: 2rem auto 0 auto;
+        font-size: .9rem;
+        line-height: normal;
+        width: 100%;
+    }
+
+    .excavator img {
+        -webkit-clip-path: none;
+        clip-path: none;
+        height: auto;
+        width: 100%;
+       
+    }
+
+    .excavator {
+        width: 100%;
+    }
+    
+    .excav-content {
+        padding: 1rem 3rem;
+        margin: auto;
+        font-size: .9rem;
+        line-height: normal;
+        width: 100%;
+    }
+
+    .plumb-content .btn, .excav-content .btn {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+	
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        align-content: center;
+        justify-items: center;
+    }
+
+    footer p {
+        font-size: .9rem;
+        padding-bottom: 1.5em;
+    }
+
+    footer .icons {
+        font-size: .8rem;
+    }
+
+    footer i {
+        
+        margin: 1.5rem .5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1880px)  {
+
+    /* Section One */
+
+    .navbar {
+        padding-top: 1.5em;
+    }
+    .navbar ul {
+        padding: 0;
+        margin-right: 2em;
+    }
+
+    .navbar a {
+        font-size: 2em;
+        padding: .5em;
+        margin: 0;
+    }
+
+    .sink {
+        width: 50%;
+    }
+
+
+    .sink img {
+        height: 450px;
+        width: 90%;       
+    }
+
+    .flex-plumb {
+        flex: none;
+        border-bottom: 5px solid var(--secondary-color);
+        
+    }
+
+    .flex-plumb h2, .excav-content h2 {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+
+    .plumb-content {
+        padding: 1rem 3rem;
+        margin: 2rem auto 0 auto;
+        font-size: 1.5rem;
+        width: 50%;
+    }
+
+    /* Section Two */
+
+    .flex-excav {
+       
+        flex-wrap: nowrap;
+    }
+
+    .excavator img {
+        
+        height: 350px;
+        width: 100%;
+       
+    }
+
+    .excavator {
+        width: 100%;
+    }
+    
+    .excav-content {
+        margin-right: 2rem;
+        padding-right: 2rem;
+        font-size: 1.5rem;
+        line-height: normal;
+        width: 100%;
+    }
+
+ 
+
+}
+

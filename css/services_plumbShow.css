@@ -1,0 +1,860 @@
+/* Slideshow 1 */
+
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0;
+    
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .carousel {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    height: 70%;
+    width: 70%;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background: url(../Images/services/services_plumb/bathroom_sink.jfif)center center/cover;
+    counter-increment: item;
+    border-radius: 5%;
+  }
+  
+  .carousel__slide:nth-child(2) {
+    background: url(../Images/services/services_plumb/bathtup.webp)center center/cover;
+    border-radius: 5%;
+  }
+
+  .carousel__slide:nth-child(3) {
+    background: url(../Images/services/services_plumb/shower.png)center center/cover;
+    border-radius: 5%;
+  }
+  
+  .carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+  
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    
+  }
+  
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel::before,
+  .carousel__prev {
+    left: -1rem;
+  }
+  
+  .carousel::after,
+  .carousel__next {
+    right: -1rem;
+  }
+  
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  
+  /* End Slideshow 1 */
+
+  /* Slideshow 2 */
+
+
+  
+  .carousel_2 {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel_2__viewport {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    height: 70%;
+    width: 70%;
+    
+  }
+  
+  .carousel_2__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background: url(../Images/services/services_plumb/waterHeater_1.png)center center/cover;
+    counter-increment: item;
+    border-radius: 5%;
+  }
+  
+  .carousel_2__slide:nth-child(2) {
+    background: url(../Images/services/services_plumb/waterHeater_2.png)center center/cover;
+    border-radius: 5%;
+  }
+
+  .carousel_2__slide:nth-child(3) {
+    background: url(../Images/services/services_plumb/waterHeater_3.webp)center center/cover;
+    border-radius: 5%;
+  }
+  
+ 
+  .carousel_2__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel_2__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel_2__slide:last-child .carousel_2__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel_2__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel_2:hover .carousel_2__snapper,
+  .carousel_2:focus-within .carousel_2__snapper {
+    animation-name: none;
+  }
+  
+  .carousel_2__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .carousel_2__navigation-list,
+  .carousel_2__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel_2__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel_2::before,
+  .carousel_2__prev {
+    left: -1rem;
+  }
+  
+  .carousel_2::after,
+  .carousel_2__next {
+    right: -1rem;
+  }
+  
+  .carousel_2::before,
+  .carousel_2::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+
+  
+  /* End Slideshow 2 */
+
+    /* Slideshow 3 */
+  
+	.carousel_3 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+	  .carousel_3__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  
+	  .carousel_3__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_plumb/faucet.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_3__slide:nth-child(2) {
+		background: url(../Images/services/services_plumb/sink_2.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_3__slide:nth-child(3) {
+		background: url(../Images/services/services_plumb/kitchenSink_1.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+		  
+	  .carousel_3__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_3__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_3__slide:last-child .carousel_3__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_3__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_3:hover .carousel_3__snapper,
+	  .carousel_3:focus-within .carousel_3__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_3__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_3__navigation-list,
+	  .carousel_3__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_3__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #333;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_3::before,
+	  .carousel_3::after,
+	  .carousel_3__prev,
+	  .carousel_3__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_3::before,
+	  .carousel_3__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_3::after,
+	  .carousel_3__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	
+	  
+	  /* End Slideshow 3 */
+
+
+
+	  /* Slideshow 4 */
+  
+	.carousel_4 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+      .carousel_4__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  .carousel_4__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_plumb/installation_1.jfif)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_4__slide:nth-child(2) {
+		background: url(../Images/services/services_plumb/installation_2.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_4__slide:nth-child(3) {
+		background: url(../Images/services/services_plumb/installatioon_3.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+		  
+	  .carousel_4__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_4__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_4__slide:last-child .carousel_4__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_4__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_4:hover .carousel_4__snapper,
+	  .carousel_4:focus-within .carousel_4__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_4__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_4__navigation-list,
+	  .carousel_4__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_4__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #333;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_4::before,
+	  .carousel_4::after,
+	  .carousel_4__prev,
+	  .carousel_4__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_4::before,
+	  .carousel_4__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_4::after,
+	  .carousel_4__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	  /* End Slideshow 4 */
+
+
+      	  /* Slideshow 5 */
+  
+	.carousel_5 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+	  .carousel_5__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  
+	  .carousel_5__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_plumb/pipeLeak_1.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_5__slide:nth-child(2) {
+		background: url(../Images/services/services_plumb/pipeLeak_2.jpeg)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_5__slide:nth-child(3) {
+		background: url(../Images/services/services_plumb/pipeLeak_3.png)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_5__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_5__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_5__slide:last-child .carousel_5__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_5__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_5:hover .carousel_5__snapper,
+	  .carousel_5:focus-within .carousel_5__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_5__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_5__navigation-list,
+	  .carousel_5__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_5__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #333;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_5::before,
+	  .carousel_5::after,
+	  .carousel_5__prev,
+	  .carousel_5__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_5::before,
+	  .carousel_5__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_5::after,
+	  .carousel_5__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	  /* End Slideshow 5 */
+
+      /* Slideshow 6 */
+  
+	.carousel_6 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+      .carousel_6__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  
+	  .carousel_6__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_plumb/commercial_1.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_6__slide:nth-child(2) {
+		background: url(../Images/services/services_plumb/Commercial_2.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_6__slide:nth-child(3) {
+		background: url(../Images/services/services_plumb/commercial_3.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_6__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_6__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_6__slide:last-child .carousel_6__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_6__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_6:hover .carousel_6__snapper,
+	  .carousel_6:focus-within .carousel_6__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_6__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_6__navigation-list,
+	  .carousel_6__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_6__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #333;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_6::before,
+	  .carousel_6::after,
+	  .carousel_6__prev,
+	  .carousel_6__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_6::before,
+	  .carousel_6__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_6::after,
+	  .carousel_6__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	  /* End Slideshow 6 */

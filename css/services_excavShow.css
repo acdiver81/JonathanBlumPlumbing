@@ -1,0 +1,860 @@
+/* Slideshow 2 */
+
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+  
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+  
+  *::-webkit-scrollbar {
+    width: 0;
+    
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+  
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  .carousel_7 {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel_7__viewport {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    height: 70%;
+    width: 70%;
+  }
+  
+  .carousel_7__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background: url(../Images/services/services_excav/sewer_1.png)center center/cover;
+    counter-increment: item;
+    border-radius: 5%;
+  }
+  
+  .carousel_7__slide:nth-child(2) {
+    background: url(../Images/services/services_excav/sewer_2.jpg)center center/cover;
+    border-radius: 5%;
+  }
+
+  .carousel_7__slide:nth-child(3) {
+    background: url(../Images/services/services_excav/sewer_3.png)center center/cover;
+    border-radius: 5%;
+  }
+  
+  .carousel_7__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel_7__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel_7__slide:last-child .carousel_7__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel_7__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel:hover .carousel_7__snapper,
+  .carousel:focus-within .carousel_7__snapper {
+    animation-name: none;
+  }
+  
+  .carousel_7__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    
+  }
+  
+  .carousel_7__navigation-list,
+  .carousel_7__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel_7__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel_7::before,
+  .carousel_7__prev {
+    left: -1rem;
+  }
+  
+  .carousel_7::after,
+  .carousel_7__next {
+    right: -1rem;
+  }
+  
+  .carousel_7::before,
+  .carousel_7::after {
+    content: '';
+    z-index: 1;
+    background-color: #fff;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  
+  /* End Slideshow 7 */
+
+  /* Slideshow 8 */
+
+
+  
+  .carousel_8 {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+  }
+  
+  .carousel_8__viewport {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    height: 70%;
+    width: 70%;
+    
+  }
+  
+  .carousel_8__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background: url(../Images/services/services_excav/specialty_1.jpeg)center center/cover;
+    counter-increment: item;
+    border-radius: 5%;
+  }
+  
+  .carousel_8__slide:nth-child(2) {
+    background: url(../Images/services/services_excav/specialty_2.jpg)center center/cover;
+    border-radius: 5%;
+  }
+
+  .carousel_8__slide:nth-child(3) {
+    background: url(../Images/services/services_excav/specialty_3.jpg)center center/cover;
+    border-radius: 5%;
+  }
+  
+ 
+  .carousel_8__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+  
+  @media (hover: hover) {
+    .carousel_8__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel_8__slide:last-child .carousel_8__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .carousel_8__snapper {
+      animation-name: none;
+    }
+  }
+  
+  .carousel_8:hover .carousel_8__snapper,
+  .carousel_8:focus-within .carousel_8__snapper {
+    animation-name: none;
+  }
+  
+  .carousel_8__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .carousel_8__navigation-list,
+  .carousel_8__navigation-item {
+    display: inline-block;
+  }
+  
+  .carousel_8__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel_8::before,
+  .carousel_8__prev {
+    left: -1rem;
+  }
+  
+  .carousel_8::after,
+  .carousel_8__next {
+    right: -1rem;
+  }
+  
+  .carousel_8::before,
+  .carousel_8::after {
+    content: '';
+    z-index: 1;
+    background-color: #fff;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+
+  
+  /* End Slideshow 8 */
+
+    /* Slideshow 9 */
+  
+	.carousel_9 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+	  .carousel_9__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  
+	  .carousel_9__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_excav/road_1.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_9__slide:nth-child(2) {
+		background: url(../Images/services/services_excav/road_2.webp)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_9__slide:nth-child(3) {
+		background: url(../Images/services/services_excav/road_3.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+		  
+	  .carousel_9__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_9__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_9__slide:last-child .carousel_9__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_9__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_9:hover .carousel_9__snapper,
+	  .carousel_9:focus-within .carousel_9__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_9__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_9__navigation-list,
+	  .carousel_9__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_9__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #fff;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_9::before,
+	  .carousel_9::after,
+	  .carousel_9__prev,
+	  .carousel_9__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_9::before,
+	  .carousel_9__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_9::after,
+	  .carousel_9__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	
+	  
+	  /* End Slideshow 9 */
+
+
+
+	  /* Slideshow 10 */
+  
+	.carousel_10 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+      .carousel_10__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  .carousel_10__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_excav/trench_1.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_10__slide:nth-child(2) {
+		background: url(../Images/services/services_excav/trench_2.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_10__slide:nth-child(3) {
+		background: url(../Images/services/services_excav/trench_3.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+		  
+	  .carousel_10__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_10__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_10__slide:last-child .carousel_10__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_10__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_10:hover .carousel_10__snapper,
+	  .carousel_10:focus-within .carousel_10__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_10__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_10__navigation-list,
+	  .carousel_10__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_10__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #fff;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_10::before,
+	  .carousel_10::after,
+	  .carousel_10__prev,
+	  .carousel_10__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_10::before,
+	  .carousel_10__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_10::after,
+	  .carousel_10__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	  /* End Slideshow 10 */
+
+
+      	  /* Slideshow 11 */
+  
+	.carousel_11 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+	  .carousel_11__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  
+	  .carousel_11__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_excav/general_1.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_11__slide:nth-child(2) {
+		background: url(../Images/services/services_excav/general_2.jfif)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_11__slide:nth-child(3) {
+		background: url(../Images/services/services_excav/general_3.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_11__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_11__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_11__slide:last-child .carousel_11__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_11__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_11:hover .carousel_11__snapper,
+	  .carousel_11:focus-within .carousel_11__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_11__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_11__navigation-list,
+	  .carousel_11__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_11__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #fff;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_11::before,
+	  .carousel_11::after,
+	  .carousel_11__prev,
+	  .carousel_11__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_11::before,
+	  .carousel_11__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_11::after,
+	  .carousel_11__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	  /* End Slideshow 11 */
+
+      /* Slideshow 12 */
+  
+	.carousel_12 {
+		position: relative;
+		padding-top: 75%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	  }
+	  
+      .carousel_12__viewport {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        overflow-x: scroll;
+        counter-reset: item;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        height: 70%;
+        width: 70%;
+      }
+	  
+	  .carousel_12__slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		background: url(../Images/services/services_excav/storm_1.jpg)center center/cover;
+		counter-increment: item;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_12__slide:nth-child(2) {
+		background: url(../Images/services/services_excav/storm_2.jfif)center center/cover;
+        border-radius: 5%;
+	  }
+	
+	  .carousel_12__slide:nth-child(3) {
+		background: url(../Images/services/services_excav/storm_3.jpg)center center/cover;
+        border-radius: 5%;
+	  }
+	  
+	  .carousel_12__snapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: center;
+	  }
+	  
+	  @media (hover: hover) {
+		.carousel_12__snapper {
+		  animation-name: tonext, snap;
+		  animation-timing-function: ease;
+		  animation-duration: 4s;
+		  animation-iteration-count: infinite;
+		}
+	  
+		.carousel_12__slide:last-child .carousel_12__snapper {
+		  animation-name: tostart, snap;
+		}
+	  }
+	  
+	  @media (prefers-reduced-motion: reduce) {
+		.carousel_12__snapper {
+		  animation-name: none;
+		}
+	  }
+	  
+	  .carousel_12:hover .carousel_12__snapper,
+	  .carousel_12:focus-within .carousel_12__snapper {
+		animation-name: none;
+	  }
+	  
+	  .carousel_12__navigation {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	  }
+	  
+	  .carousel_12__navigation-list,
+	  .carousel_12__navigation-item {
+		display: inline-block;
+	  }
+	  
+	  .carousel_12__navigation-button {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		background-color: #fff;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+        margin-bottom: 1rem;
+	  }
+	  
+	  .carousel_12::before,
+	  .carousel_12::after,
+	  .carousel_12__prev,
+	  .carousel_12__next {
+		position: absolute;
+		top: 0;
+		margin-top: 37.5%;
+		width: 4rem;
+		height: 4rem;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		font-size: 0;
+		outline: 0;
+	  }
+	  
+	  .carousel_12::before,
+	  .carousel_12__prev {
+		left: -1rem;
+	  }
+	  
+	  .carousel_12::after,
+	  .carousel_12__next {
+		right: -1rem;
+	  }
+	  
+
+	  
+	  /* End Slideshow 12 */
